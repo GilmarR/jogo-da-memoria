@@ -1,0 +1,143 @@
+/*---------------------------------------------
+			Estilo da página login
+---------------------------------------------*/
+.loginForm {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+}
+
+.login_header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.login_header img {
+	width: 150px;
+}
+
+.login_header h1 {
+	color: #333;
+	font-size: 1.7em;
+}
+
+.login_input {
+	border: 2px solid #333;
+	border-radius: 25px;
+	color: #333;
+	font-size: .9em;
+	margin-bottom: 15px;
+	max-width: 300px;
+	width: 100%;
+	outline: none;
+	padding: 7px 10px;
+}
+
+.login_button {
+	background-color: #ee665c;
+	border-radius: 15px;
+	color: #fff;
+	padding: 15px;
+	cursor: pointer;
+	font-size: 15px;
+	width: 100%;
+	max-width: 150px;
+	border: none;
+	letter-spacing: 2px;
+}
+
+.login_button:disabled {
+	background-color: #eee;
+	color: #aaa;
+	cursor: auto;
+}
+
+/*---------------------------------------------
+			Estilo da página do jogo
+---------------------------------------------*/
+
+main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-image: url('../images/bg.jpg');
+	background-size: cover;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 800px;
+	padding: 30px 15px;
+	margin: 0 0 20px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, .7);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 15px;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.card {
+	width: 100%;
+	aspect-ratio: 3/4;
+	position: relative;
+	transition: all 400ms ease;
+	transform-style: preserve-3d;
+	border-radius: 5px;
+	background-color: #ccc;
+}
+
+.face {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	border: 2px solid #39813a;
+	border-radius: 5px;
+	transition: all 500ms ease;
+}
+
+.front {
+	transform: rotateY(180deg);
+}
+
+.back {
+	background-image: url('../images/back.png');
+	backface-visibility: hidden;
+}
+
+.reveal-card {
+	transform: rotateY(180deg);
+}
+
+.disabled-card {
+	filter: saturate(0);
+	opacity: .5;
+}
+
+.pop-up {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 30px;
+    background-color: #fff;
+    text-align: center;
+}
