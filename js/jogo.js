@@ -22,7 +22,7 @@ const checkEndGame = () => {
 
 	if (disabledCards.length === 20) {
 		clearInterval(this.loop);
-		popupMensagem.innerHTML = `Parabéns, ${divPlayer.innerHTML}, seu tempo foi: ${timer.innerHTML} <br> Jogo em desenvolvimento com novas funções em breve <br><br> *jogar novamente desativado*`;
+		popupMensagem.innerHTML = `Parabéns ${divPlayer.innerHTML}, seu tempo foi: ${timer.innerHTML} <br> Jogo em desenvolvimento com novas funções em breve <br><br> *jogar novamente desativado*`;
 		popup.classList.remove('d-none');
 	}
 }
