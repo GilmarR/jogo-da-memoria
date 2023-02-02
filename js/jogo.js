@@ -1,6 +1,8 @@
 const grid = document.querySelector('.grid');
 const divPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
+const popup = document.querySelector('.pop-up');
+const popupMensagem = document.querySelector('.mensagem-pop');
 
 const characters = [
 	'beth', 'jerry', 'jessica', 'morty', 'pessoa-passaro', 'pickle-rick', 'rick', 'summer', 'meeseeks', 'scroopy',
@@ -20,7 +22,8 @@ const checkEndGame = () => {
 
 	if (disabledCards.length === 20) {
 		clearInterval(this.loop);
-		alert(`Parabéns, ${divPlayer.innerHTML}, seu tempo foi: ${timer.innerHTML} \n\n Jogo em desenvolvimento com novas funções em breve`);
+		popupMensagem.innerHTML = `Parabéns, ${divPlayer.innerHTML}, seu tempo foi: ${timer.innerHTML} <br> Jogo em desenvolvimento com novas funções em breve <br><br> *jogar novamente desativado*`;
+		popup.classList.remove('d-none');
 	}
 }
 
@@ -116,7 +119,7 @@ const startTimer = () => {
 			timer.innerHTML = '0' + timer.innerHTML;
 		}
 
-	}, 500);
+	}, 1000);
 
 }
 
